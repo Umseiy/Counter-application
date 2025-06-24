@@ -1,0 +1,47 @@
+npx create-react-app click-counter
+cd click-counter
+npm start
+
+
+---
+
+2. Click Counter Component Code
+
+In your App.js, replace the content with this code:
+
+import React, { useState } from 'react';
+import './App.css';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  // Function to increase count
+  const handleIncrease = () => {
+    setCount(count + 1);
+  };
+
+  // Function to decrease count
+  const handleDecrease = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div className="App" style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h1>Click Counter App</h1>
+      <h2>Count: {count}</h2>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+        <button onClick={handleDecrease} style={{ padding: '10px 20px', fontSize: '16px' }}>
+          Decrease
+        </button>
+        <button onClick={handleIncrease} style={{ padding: '10px 20px', fontSize: '16px' }}>
+          Increase
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+---￼Enter
